@@ -1,0 +1,21 @@
+# ---- secrets ----
+.env
+
+# ---- corpus (rebuilt via scripts/download_corpus.py; never commit large PDFs) ----
+data/*.pdf
+
+# ---- built index (rebuilt via src/rag/ingest.py) ----
+index/
+
+# ---- python ----
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# ---- local scratch ----
+out_*.mp3
+*.wav
+.DS_Store

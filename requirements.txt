@@ -1,0 +1,22 @@
+# ---- Core RAG (required for TITO) ----
+pymupdf>=1.24,<2.0          # fast PDF text extraction (~35x faster than pypdf on the Act)
+rank-bm25>=0.2.2           # lexical retrieval
+numpy>=1.24
+requests>=2.31
+python-dotenv>=1.0
+
+# ---- Dense retrieval (hybrid search). Remove to run BM25-only ----
+sentence-transformers>=2.6  # local embeddings: all-MiniLM-L6-v2
+
+# ---- Web UI (bonus) ----
+streamlit>=1.36
+
+# ---- Voice modes (install if you want TIVO/VITO/VIVO) ----
+pyttsx3>=2.90              # offline TTS (macOS NSSS / Windows SAPI5 / Linux espeak)
+faster-whisper>=1.0        # local STT
+sounddevice>=0.4           # microphone capture
+soundfile>=0.12            # wav read/write
+# edge-tts>=6.1            # optional cloud neural TTS (uncomment to use TTS_PROVIDER=edge)
+
+# ---- Dev / tests (optional) ----
+pytest>=8.0
